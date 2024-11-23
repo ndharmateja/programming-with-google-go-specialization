@@ -23,6 +23,6 @@ func main() {
 	data := map[string]string{"name": name, "address": address}
 
 	// Convert to JSON and print it
-	barr, _ := json.Marshal(data)
+	barr, _ := json.MarshalIndent(data, "", "  ")
 	fmt.Println("JSON data:", string(barr))
 }
